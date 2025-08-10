@@ -1,0 +1,132 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+     background-color: #e0e5ec;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    width: 100vh;
+    height: 200px;
+    padding: 10px;
+    top: 80px;
+   
+    
+}
+
+.income{
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    border-radius: 5px;
+    top: 10%;
+    padding-left: 10px;
+    background-color:  #e0e5ec;
+     box-shadow: 10px 10px 20px #b8b9b2,-10px -10px 20px #ffffff;
+
+   
+
+}
+.expenses{
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    border-radius: 5px;
+    left: 35%;
+    top: 10%;
+     padding-left: 10px;
+     box-shadow: 10px 10px 20px #b8b9b2,-10px -10px 20px #ffffff;
+
+    
+
+}
+.balance{
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    border-radius: 5px;
+    left: 70%;
+    top: 10%;
+    padding-left: 10px;
+    box-shadow: 10px 10px 20px #b8b9b2,-10px -10px 20px #ffffff;
+}
+
+.income:hover,
+.expenses:hover,
+.balance:hover {
+    box-shadow: inset 5px 10px #b8b9b2, inset -5px 10px #ffffff;
+}
+
+.amount{
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+/* login styling */
+.large-box{
+    position: relative;
+    height: 100vh;
+   
+    
+   
+}
+.login{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 200px;
+    background-color: #e0e5ec;
+    box-shadow: 10px 10px 20px #b8b9b2,-10px -10px 20px #ffffff;
+   padding: 10px;
+    align-items: center;
+    justify-items: center;
+  
+}
+.btnlogin{
+    position: absolute;
+    left: 50%;
+    top: 70%;
+  
+    transform: translate(-50%);
+    background-color: #e0e5ec;
+    box-shadow: 10px 10px 20px #b8b9b2,-10px -10px 20px #ffffff;
+}
+.btnlogin:hover{
+        box-shadow: inset 5px 10px #b8b9b2, inset -5px 10px #ffffff;
+        border: none;
+}
+#message{
+    position: absolute;
+    top: 85%;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: #b8b9b2;
+}
+.btnlogout{
+    position: absolute;
+    border-radius: 10px;
+    padding: 5px;
+    right: 5%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background-color: #e0e5ec;
+    box-shadow: 10px 10px 20px #b8b9b2,-10px -10px 20px #ffffff;
+}
+.btnlogout:hover{
+      box-shadow: inset 5px 10px #b8b9b2, inset -5px 10px #ffffff;
+        border: none;
+       
+}

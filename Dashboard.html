@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+    <script>
+       (function(){
+      const t = localStorage.getItem("lastuser");
+      if(!t){ location.replace("login.html"); return; }
+      
+    })();
+    </script>
+</head>
+<body>
+    <header class="navbar">
+        <button class="btnlogout" onclick="logout()">Logout</button>
+    </header>
+    <div class="container">
+        <div class="income">
+            <p>Total Income</p>
+            <h3 class="amount">50$</h3>
+        </div>
+
+        <div class="expenses">
+            <p>Total Expenses</p>
+             <h3 class="amount">50$</h3>
+        </div>
+
+        <div class="balance">
+            <p>Net Balance</p>
+            <h3 class="amount">50$</h3>
+        </div>
+    </div>
+     <script src="main.js"></script>
+
+</body>
+</html>
