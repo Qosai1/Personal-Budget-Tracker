@@ -1,39 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Dashboard</title>
-    <script>
-       (function(){
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <title>Dashboard</title>
+  <script>
+    (function () {
       const t = localStorage.getItem("lastuser");
-      if(!t){ location.replace("login.html"); return; }
-      
+      if (!t) { location.replace("login.html"); return; }
     })();
-    </script>
+  </script>
 </head>
 <body>
-    <header class="navbar">
-        <button class="btnlogout" onclick="logout()">Logout</button>
-    </header>
-    <div class="container">
-        <div class="income">
-            <p>Total Income</p>
-            <h3 class="amount">50$</h3>
-        </div>
+ 
+  <header class="navbar">
+    <button class="btnlogout">Dark Mode</button>
+    <button class="btnlogout" onclick="logout()">Logout</button>
+        
 
-        <div class="expenses">
-            <p>Total Expenses</p>
-             <h3 class="amount">50$</h3>
-        </div>
+  </header>
 
-        <div class="balance">
-            <p>Net Balance</p>
-            <h3 class="amount">50$</h3>
-        </div>
+
+  <div class="container">
+    <div class="income" >
+      <p>Total Income</p>
+      <h3 class="amount1" id="income"></h3>
+      <span>$</span>
     </div>
-     <script src="main.js"></script>
 
+    <div class="expenses" >
+      <p>Total Expenses</p>
+      <h3 class="amount1" id="expenses"></h3>
+      <span>$</span>
+    </div>
+
+    <div class="balance">
+      <p>Net Balance</p>
+      <h3 class="amount1" id="balance"></h3>
+      <span>$</span>
+    </div>
+    
+</div>
+
+  
+  <div class="container1">
+ 
+    <form class="transactions">
+      <h3>Add Transaction</h3>
+
+      <div class="type1">
+        <label for="type1">Type</label>
+        <select name="type1" id="type1">
+          <option value="income">Income</option>
+          <option value="expenses">Expenses</option>
+        </select>
+      </div>
+
+      <div class="category">
+        <label for="categoryInput">Category</label>
+        <input type="text" id="categoryInput" placeholder="e.g. Salary, Food, Transport"  />
+      </div>
+
+      <div class="date">
+        <label for="date">Date</label>
+        <input type="date" id="date" />
+      </div>
+
+      <div class="amount">
+        <label for="amount">Amount</label>
+        <input type="number" min="0" placeholder="0.00 $" id="amount"  />
+      </div>
+
+      <div class="notes">
+        <label for="notes">Notes</label>
+        <input type="text" id="notes" placeholder="Optional note" />
+      </div>
+
+      <div class="btntransaction">
+        <button type="submit" id="btnadd" onclick="calc()">Add</button>
+      </div>
+    </form>
+
+    
+    <div class="search">
+      <h3>Filter & Search</h3>
+
+      <div class="category">
+        <label for="category">Category</label>
+        <select name="category" id="category">
+          <option value="all">All</option>
+        
+        </select>
+      </div>
+      
+      <div class="filter">
+        <label for="keyword">Search</label>
+        <input type="search" id="keyword" placeholder="Search by keywords" />
+      </div>
+
+      <div class="from">
+        <label for="fromDate">From</label>
+        <input type="date" id="fromDate" />
+      </div>
+
+      <div class="to">
+        <label for="toDate">To</label>
+        <input type="date" id="toDate" />
+      </div>
+
+      <div class="btnSearch">
+        <button type="submit" id="search">Search</button>
+      </div>
+    </div>
+</div>
+<div class="chart">
+<canvas id="myChart" ></canvas>
+</div>
+  <script src="main.js"></script>
 </body>
 </html>
