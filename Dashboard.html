@@ -16,8 +16,8 @@
 <body>
  
   <header class="navbar">
-    <button class="btnlogout">Dark Mode</button>
-    <button class="btnlogout" onclick="logout()">Logout</button>
+    <button class="btnlogout" id="darkmode">Dark Mode</button>
+    <button class="btnlogout" id="logout">Logout</button>
         
 
   </header>
@@ -77,9 +77,10 @@
         <label for="notes">Notes</label>
         <input type="text" id="notes" placeholder="Optional note" />
       </div>
+      <div id="error"></div>
 
       <div class="btntransaction">
-        <button type="submit" id="btnadd" onclick="calc()">Add</button>
+        <button type="submit" id="btnadd" >Add</button>
       </div>
     </form>
 
@@ -114,10 +115,11 @@
         <button type="submit" id="search">Search</button>
       </div>
     </div>
-</div>
-<div class="chart">
+    <div class="chart">
 <canvas id="myChart" ></canvas>
 </div>
+</div>
+
   <script src="main.js"></script>
 </body>
 </html>
